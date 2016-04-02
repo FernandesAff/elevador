@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef struct {
-	int partida, destino, chamada, tempoespera, tempoviagem;
+	int and_partida, and_destino, and_chamada, temp_espera, temp_viagem,temp_tot;
 } TipoItem;
 
 typedef struct Celula_str *Apontador;
