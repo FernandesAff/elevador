@@ -1,2 +1,3 @@
 void FLVazia(TipoLista *);
-void Leitura (TipoLista *);
+void LeituraEventos (TipoLista *);
+void LeituraAmbiente (int *, int *);
