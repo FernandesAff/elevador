@@ -15,7 +15,7 @@ void LeituraEventos (TipoLista *Lista){
 		Lista->Ultimo = Lista->Ultimo->Prox;
 		Lista->Ultimo->Item.and_partida = partida;/*andar de partida*/
 		Lista->Ultimo->Item.and_destino = destino;/*andar de destino*/
-		Lista->Ultimo->Item.and_chamada = chamada;/*momento da chamada do elevador*/
+		Lista->Ultimo->Item.chamada = chamada;/*momento da chamada do elevador*/
 		/*Lista->Ultimo->Item.temp_espera = 0;
 		Lista->Ultimo->Item.temp_viagem = 0;
 		Lista->Ultimo->Item.temp_tot = 0;*/
