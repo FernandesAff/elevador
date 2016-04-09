@@ -1,3 +1,7 @@
-void FLVazia(TipoLista *);
+#ifndef ENTRADA_H
+#define ENTRADA_H
+
 void LeituraEventos (TipoLista *);
-void LeituraAmbiente (int *, int *);
+void LeituraAmbiente (int *);
+
+#endif
