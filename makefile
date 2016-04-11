@@ -1,7 +1,7 @@
 all:programa limpa
 
 programa:main.o logica.o entrada.o lista.o
-	gcc main.o logica.o entrada.o lista.o -o programa
+	gcc main.o logica.o entrada.o lista.o -o elevador
 
 main.o:main.c logica.c logica.h entrada.c entrada.h lista.c lista.h
 	gcc -c main.c 
