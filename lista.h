@@ -4,7 +4,7 @@
 #define LISTA_H
 
 typedef struct {
-	int and_partida, and_destino, chamada, temp_entrada/*, temp_viagem,temp_tot*/;
+	int and_partida, and_destino, chamada, temp_entrada;
 } TipoItem;
 
 typedef struct Celula_str *Apontador;

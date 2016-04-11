@@ -13,18 +13,20 @@ int main (int argc, char **argv){
 
 	FLVazia(&lista);
 
-	while ((opt=getopt(argc, argv, "a:e:"))>0){
+	if ( argc < 3 ){/*Mostra as opcoes de execucao do programa no terminal*/
+		printf("Numero insuficiente de opcoes, insira ao menos duas:\n\n" );
+		show_help(argv[0]);
+	}	
+	while ((opt=getopt(argc, argv, "hae"))>0){/*Faz a entrada dos arquivos descrevendo o ambiente e os eventos a serem tratados*/
 		switch (opt){
-			case 'a':/*ambiente do elevador*/
-				LeituraAmbiente (&ocupacao_max);
-			case 'e':/*eventos a serem tratados*/
-				LeituraEventos (&lista);
+			case 'a':
+				LeituraAmbiente (&ocupacao_max, &andares);
 				break;
+			case 'e':
+				LeituraEventos (&lista);
+				break;	
 		}
 	}
-
-	printf("vazia%d\n", Vazia(lista));
-
 	Logica(&lista, ocupacao_max);
 	return 0;
 }
