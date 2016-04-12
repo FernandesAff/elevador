@@ -2,7 +2,7 @@
 #define ENTRADA_H
 
 void show_help(char *);
-void LeituraEventos (TipoLista *);
-void LeituraAmbiente (int *, int *);
+void LeituraEventos (TipoLista *, char *);
+void LeituraAmbiente (int *, int *, char *);
 
 #endif

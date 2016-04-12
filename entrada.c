@@ -9,11 +9,11 @@ void show_help(char *name) {/*Mostra uma tela de ajuda ao usuario*/
     exit(-1) ;
 }
 
-void LeituraEventos (TipoLista *Lista){/*Le os eventos em um arquivo e passa para uma lista*/
+void LeituraEventos (TipoLista *Lista, char *eventos_arq){/*Le os eventos em um arquivo e passa para uma lista*/
 	FILE *fp;
 	int partida, destino, chamada;
 
-	fp=fopen("eventos.txt", "r+");
+	fp=fopen(eventos_arq, "r+");
 	while ((fscanf(fp,"%d %d %d\n", &partida, &destino, &chamada))!=EOF){
 		Lista->Ultimo->Prox = (Apontador) malloc(sizeof(Celula));
 		Lista->Ultimo = Lista->Ultimo->Prox;
@@ -26,8 +26,8 @@ void LeituraEventos (TipoLista *Lista){/*Le os eventos em um arquivo e passa par
 	fclose (fp);
 }
 
-void LeituraAmbiente (int *ocupacao_max, int *andares){/*Le o limite de passageiros do elevador e o numero de andares do predio*/
-	FILE *fp=fopen("ambiente.txt", "r");
+void LeituraAmbiente (int *ocupacao_max, int *andares, char *ambiente_arq){/*Le o limite de passageiros do elevador e o numero de andares do predio*/
+	FILE *fp=fopen(ambiente_arq, "r");
 
 	fscanf (fp, "%d %d", ocupacao_max, andares);
 	fclose (fp);
