@@ -34,6 +34,6 @@ int main (int argc, char **argv){
 	LeituraAmbiente (&ocupacao_max, &andares, ambiente_arq);
 	LeituraEventos (&lista, eventos_arq);
 	Logica(&lista, ocupacao_max);
-	
+
 	return 0;
 }
